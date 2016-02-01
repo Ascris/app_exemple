@@ -1,0 +1,8 @@
+<h1>Aide</h1>
+<p>
+	Obtenez toute l'aide necessaire pour ce tutoriel ROR
+	<a href="http://railstutorial.org/help"> ICI </a>
+	est un projet de livre et de screencasts pour apprendre le développement
+	web avec <a href="http://rubyonrails.org"> Ruby On Rails </a>
+	Ceci est la premiere application du tutoriel.
+</p>
