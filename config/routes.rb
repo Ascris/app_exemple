@@ -1,4 +1,8 @@
 AppExemple::Application.routes.draw do
+  get "pages/Accueil"
+
+  get "pages/Contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
