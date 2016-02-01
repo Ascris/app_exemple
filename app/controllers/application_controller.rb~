@@ -1,0 +1,4 @@
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+  @base_titre = "App_exemple pour Ruby On Rails"
+end
