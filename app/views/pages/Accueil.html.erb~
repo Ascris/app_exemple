@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App_exemple pour Ruby On Rails | <%= @titre %> </title>
+	</head>
+	<body>
+		<h1>App_exemple</h1>
+		<p>
+			Ceci est la page d'accueil de l'appli exemple du
+			<a href="http://railstutorial.org"> Tuto pour Ruby On Rails</a>
+		</p>
+	</body>
+</html>
