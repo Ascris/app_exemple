@@ -3,22 +3,11 @@
 	<head>
 		<title> <%= titre %> </title>
 		<%= csrf_meta_tag %>
-		<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-		<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-		<%= stylesheet_link_tag 'personalisation', :media => 'screen' %>
+		<%= render 'layouts/stylesheets' %>
 	</head>
 	<body>
 		<div class="container">
-		  <header>
-		    <%= image_tag("logo.png", :alt => "Application Exemple", :class => "round") %>
-		    <nav class="round">
-		      <ul>
-		        <li><%= link_to "Accueil", '#' %></li>
-		        <li><%= link_to "Aide", '#' %></li>
-		        <li><%= link_to "Inscription", '#' %></li>
-		      </ul>
-		    </nav>
-		  </header>
+		  <%= render 'layouts/entete' %>
 		  <section class="round">
 		    <%= yield %>
 		  </section>

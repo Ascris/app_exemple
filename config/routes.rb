@@ -1,11 +1,12 @@
 AppExemple::Application.routes.draw do
-  get "pages/Accueil"
 
-  get "pages/Contact"
+# Quand un appel a la page /Contact est fait, on demande la page au controleur
+  match '/Contact', :to => 'pages#Contact'
+  match '/A_Propos', :to => 'pages#A_Propos'
+  match '/Aide', :to => 'pages#Aide'
 
-  get "pages/A_Propos"
-
-  get "pages/Aide"
+# On redirige vers notre accueil quand la page racine est demandee
+  root :to => 'pages#Accueil'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
