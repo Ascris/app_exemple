@@ -1,0 +1,6 @@
+class Personne
+	attr_accessor :nom, :prenom
+	def initialize(attributes {})
+		@nom = attributes[:nom]
+		@prenom = attributes[:prenom]
+	end
