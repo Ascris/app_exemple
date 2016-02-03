@@ -1,0 +1,2 @@
+gem install annotate
+	-> generation de commentaires pour les models créés
