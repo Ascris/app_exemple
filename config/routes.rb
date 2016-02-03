@@ -1,9 +1,12 @@
 AppExemple::Application.routes.draw do
 
+  get "users/new"
+
 # Quand un appel a la page /Contact est fait, on demande la page au controleur
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
+  match '/signup', :to => 'users#new'
 
 # On redirige vers notre accueil quand la page racine est demandee
   root :to => 'pages#Accueil'
