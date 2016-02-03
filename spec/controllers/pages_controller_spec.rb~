@@ -9,7 +9,7 @@ describe PagesController do
   end
 
   describe "GET 'Accueil'" do
-    it "should be successful" do
+    it "devrait etre un succes" do
       get 'Accueil'
       response.should be_success
     end
@@ -22,7 +22,7 @@ describe PagesController do
   end
 
   describe "GET 'contact'" do
-    it "should be successful" do
+    it "devrait etre un succes" do
       get 'contact'
       response.should be_success
     end
@@ -35,7 +35,7 @@ describe PagesController do
   end
 
   describe "GET 'about'" do
-	it "should be successful" do
+	it "devrait etre un succes" do
 		get 'about'
 		response.should be_success
 	end
@@ -49,7 +49,7 @@ describe PagesController do
   end
 
   describe "GET 'help'" do
-	it "should be successful" do
+	it "devrait etre un succes" do
 		get 'help'
 		response.should be_success
 	end

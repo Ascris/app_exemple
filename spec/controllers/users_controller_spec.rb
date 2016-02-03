@@ -11,7 +11,7 @@ describe UsersController do
 
 	it "devrait avoir le bon titre" do
 		get 'new'
-		response.should have_selector("title",
+		response.should have_selector('title',
 									  :content => "Inscription")
 	end
   end

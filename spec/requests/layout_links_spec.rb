@@ -26,4 +26,25 @@ describe "LayoutLinks" do
     get '/signup'
     response.should have_selector('title', :content => "Inscription")
   end
+
+  # tests sur le bon routage des liens du layout
+  it "devrait avoir le bon lien sur le layout" do
+	visit root_path
+	click_link "A Propos"
+	response.should have_selector('title', :content => "about")
+
+	click_link "Aide"
+	response.should have_selector('title', :content => "help")
+
+	click_link "Contact"
+	response.should have_selector('title', :content => "contact")
+
+	click_link "Accueil"
+	response.should have_selector('title', :content => "Accueil")
+ 
+	click_link "Inscription"
+	response.should have_selector('title', :content => "Inscription")
+
+  end
+
 end

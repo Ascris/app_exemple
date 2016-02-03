@@ -29,7 +29,7 @@ describe PagesController do
 
 	it "devrait avoir le bon titre" do
 	  get 'contact'
-	  response.should have_selector("title",
+	  response.should have_selector('title',
 									:content => @base_titre + " | contact")
 	end
   end
@@ -43,7 +43,7 @@ describe PagesController do
 
 	it "devrait avoir le bon titre" do
 	  get 'about'
-	  response.should have_selector("title",
+	  response.should have_selector('title',
 									:content => @base_titre + " | about")
 	end
   end
@@ -56,7 +56,7 @@ describe PagesController do
 
 	it "devrait avoir le bon titre" do
 		get 'help'
-		response.should have_selector("title",
+		response.should have_selector('title',
 									  :content => @base_titre + " | help")
 	end
   end
