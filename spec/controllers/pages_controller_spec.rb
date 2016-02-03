@@ -21,43 +21,43 @@ describe PagesController do
 	end
   end
 
-  describe "GET 'Contact'" do
+  describe "GET 'contact'" do
     it "should be successful" do
-      get 'Contact'
+      get 'contact'
       response.should be_success
     end
 
 	it "devrait avoir le bon titre" do
-	  get 'Contact'
+	  get 'contact'
 	  response.should have_selector("title",
-									:content => @base_titre + " | Contact")
+									:content => @base_titre + " | contact")
 	end
   end
 
-  describe "GET 'A_Propos'" do
+  describe "GET 'about'" do
 	it "should be successful" do
-		get 'A_Propos'
+		get 'about'
 		response.should be_success
 	end
 
 
 	it "devrait avoir le bon titre" do
-	  get 'A_Propos'
+	  get 'about'
 	  response.should have_selector("title",
-									:content => @base_titre + " | A_Propos")
+									:content => @base_titre + " | about")
 	end
   end
 
-  describe "GET 'Aide'" do
+  describe "GET 'help'" do
 	it "should be successful" do
-		get 'Aide'
+		get 'help'
 		response.should be_success
 	end
 
 	it "devrait avoir le bon titre" do
-		get 'Aide'
+		get 'help'
 		response.should have_selector("title",
-									  :content => @base_titre + " | Aide")
+									  :content => @base_titre + " | help")
 	end
   end
 

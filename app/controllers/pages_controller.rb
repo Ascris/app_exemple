@@ -4,16 +4,16 @@ class PagesController < ApplicationController
 	@titre = "Accueil"
   end
 
-  def Contact
-	@titre = "Contact"
+  def contact
+	@titre = "contact"
   end
 
-  def A_Propos
-	@titre = "A_Propos"
+  def about
+	@titre = "about"
   end
 
-  def Aide
-	@titre = "Aide"
+  def help
+	@titre = "help"
   end
 
 end
