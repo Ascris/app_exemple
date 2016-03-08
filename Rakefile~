@@ -4,7 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 #require 'rake/testtask'
-require 'rdoc/task'
+#require 'rdoc/task'
 #require 'tasks/rails'
 
 AppExemple::Application.load_tasks
