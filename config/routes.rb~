@@ -1,4 +1,5 @@
 AppExemple::Application.routes.draw do
+  resource :users
 
   get "users/new"
 
