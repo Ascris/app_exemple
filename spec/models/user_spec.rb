@@ -146,31 +146,4 @@ describe User do
 
 	end #fin cryptage mot de passe
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

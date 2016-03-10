@@ -3,6 +3,7 @@ require 'spec_helper'
 describe UsersController do
   render_views
 
+# Affichage Utilisateur
   describe "GET show" do
 	before(:each) do
 		@user = Factory(:user)
@@ -32,9 +33,9 @@ describe UsersController do
 		get :show, :id => @user
 		response.should have_selector("h1>img", :class => "gravatar")
 	end
-  end # fin GET show
+  end # affichage Utilisateur
 
-
+# Nouvel Utilisateur
   describe "GET 'new'" do
     it "devrait etre un succes" do
       get 'new'
@@ -46,6 +47,67 @@ describe UsersController do
 		response.should have_selector('title',
 									  :content => "Inscription")
 	end
-  end
+  end # fin GET new
+
+
+# Inscription Utilisateur
+	describe "POST 'create'" do
+
+		describe "echec" do
+
+		  before(:each) do
+		    @attr = { :nom => "",
+						:email => "",
+						:password => "",
+						:password_confirmation => ""
+			}
+		  end
+
+		  it "ne devrait pas creer d'utilisateur" do
+		    lambda do
+		      post :create, :user => @attr
+		    end.should_not change(User, :count)
+		  end
+
+		  it "devrait avoir le bon titre" do
+		    post :create, :user => @attr
+		    response.should have_selector("title", :content => "Inscription")
+		  end
+
+		  it "devrait rendre la page 'new'" do
+		    post :create, :user => @attr
+		    response.should render_template('new')
+		  end
+		end # fin echec
+
+		describe "succes" do
+
+		  before(:each) do
+		    @attr = { :nom => "User test",
+						:email => "usertest@example.com",
+						:password => "passwordtest",
+						:password_confirmation => "passwordtest"
+			}
+		  end
+
+		  it "devrait creer un utilisateur" do
+		    lambda do
+		      post :create, :user => @attr
+		    end.should change(User, :count).by(1)
+		  end
+
+		  it "devrait rediriger vers la page d'afficahge de l'utilisateur" do
+			post :create, :user => @attr
+			response.should redirect_to(user_path(assigns(:user)))
+		  end
+
+		  it "devrait avoir un message de bienvenue" do
+			post :create, :user => @attr
+			flash[:success].should =~ /Bienvenue sur ce site Web avec RubyOnRails/i
+		  end
+
+		end # fin echec
+  end # fin POST create
+
 
 end
